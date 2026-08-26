@@ -15,21 +15,23 @@
 
   <style>
     :root {
-      --bg: #1B4BAE;
-      /* azul da logo */
+      --bg: #EDE5C0;
+      /* bege/creme da palavra PET da logo */
       --surface: #CC2229;
       /* vermelho da logo */
       --surface-hover: #B51E24;
       /* vermelho mais escuro no hover */
-      --border: rgba(255, 255, 255, 0.18);
+      --border: rgba(0, 0, 0, 0.10);
       --red: #CC2229;
       --blue: #1B4BAE;
       --text: #FFFFFF;
-      --muted: rgba(255, 255, 255, 0.70);
-      /* Gradiente de borda hover: branco → azul claro → branco */
-      --grad: linear-gradient(135deg, #FFFFFF, #7BAAFF, #FFFFFF);
-      --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.20);
-      --shadow-hover: 0 10px 32px rgba(0, 0, 0, 0.35);
+      --text-dark: #2A1A0E;
+      /* texto escuro para uso sobre fundo claro */
+      --muted: rgba(255, 255, 255, 0.75);
+      /* Gradiente de borda hover: vermelho → dourado → vermelho */
+      --grad: linear-gradient(135deg, #CC2229, #E8A020, #CC2229);
+      --shadow-sm: 0 2px 16px rgba(0, 0, 0, 0.12);
+      --shadow-hover: 0 10px 32px rgba(0, 0, 0, 0.22);
     }
 
     *,
@@ -43,9 +45,9 @@
     body {
       font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
       background-color: var(--bg);
-      /* Gradiente sutil de profundidade no azul */
-      background-image: radial-gradient(ellipse at top, #2460D8 0%, #1B4BAE 55%, #142F7A 100%);
-      color: var(--text);
+      /* Gradiente sutil de profundidade no creme */
+      background-image: radial-gradient(ellipse at top, #F5EDD0 0%, #EDE5C0 55%, #D9CFA0 100%);
+      color: var(--text-dark);
       min-height: 100vh;
       display: flex;
       justify-content: center;
@@ -64,8 +66,8 @@
       left: 50%;
       transform: translateX(-50%);
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(204, 34, 41, 0.20) 0%, transparent 70%);
-      filter: blur(50px);
+      background: radial-gradient(circle, rgba(204, 34, 41, 0.15) 0%, transparent 70%);
+      filter: blur(60px);
       pointer-events: none;
       z-index: 0;
     }
@@ -100,7 +102,7 @@
     /* ── Bio ───────────────────────────────────── */
     .profile-bio {
       font-size: 0.93rem;
-      color: var(--muted);
+      color: rgba(42, 26, 14, 0.65);
       line-height: 1.6;
       max-width: 360px;
       margin-bottom: 38px;
@@ -243,8 +245,8 @@
     footer {
       margin-top: 44px;
       font-size: 0.77rem;
-      color: var(--muted);
-      opacity: 0.7;
+      color: rgba(42, 26, 14, 0.50);
+      opacity: 0.9;
       animation: fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
       animation-delay: 0.30s;
     }
@@ -317,6 +319,21 @@
             <div class="link-label">
               <span>Fale no WhatsApp</span>
               <small>Atendimento personalizado</small>
+            </div>
+          </div>
+          <span class="link-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <!-- Parceiros -->
+      <div class="link-wrap">
+        <a id="link-parceiros" href="https://www.cozinhapets.com.br/#parceiros"
+          target="_blank" rel="noopener noreferrer" class="link-card" aria-label="Conheça os parceiros da Cozinha Pet">
+          <div class="link-content">
+            <span class="link-icon">🤝</span>
+            <div class="link-label">
+              <span>Parceiros</span>
+              <small>Conheça quem faz parte da nossa rede</small>
             </div>
           </div>
           <span class="link-arrow" aria-hidden="true">→</span>
